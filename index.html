@@ -314,7 +314,7 @@
 <section class="hero is-small is-light paper-figures-section">
   <div class="hero-body">
     <div class="container paper-figures-container">
-      <h2 class="title is-3 has-text-centered">Teaser</h2>
+      <h2 class="title is-3 has-text-centered">Overview</h2>
       <figure class="has-text-centered" style="margin: 0;">
         <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="RoboWM-Bench teaser." width="1835" height="1478" loading="lazy" decoding="async">
       </figure>
@@ -389,7 +389,135 @@
 </section>
 <!-- End real-to-sim consistency -->
 
+<!-- Scores -->
+<section class="section hero is-light" id="Scores">
+  <div class="container paper-figures-container">
+    <h2 class="title is-3 has-text-centered">Scores</h2>
 
+    <div class="scores-block">
+      <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">Human</h3>
+
+      <h4 class="title is-5" style="margin-top: 1.5rem;">Human (Task Level)</h4>
+      <div class="scores-table-wrap">
+        <table class="score-table" data-heatmap="true" data-highlight-max="true">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Pick Object</th>
+              <th>Push Button</th>
+              <th>Put on Plate</th>
+              <th>Pour Water</th>
+              <th>Stack Cups</th>
+              <th>Open Drawer</th>
+              <th>Put in Drawer</th>
+              <th>Fold Towel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cosmos</td><td>23%</td><td>40%</td><td>15%</td><td>0%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td></tr>
+            <tr><td>Wan 2.2</td><td>57%</td><td>80%</td><td>55%</td><td>60%</td><td>40%</td><td>0%</td><td>20%</td><td>0%</td></tr>
+            <tr><td>Veo 3.1</td><td>73%</td><td>100%</td><td>30%</td><td>60%</td><td>20%</td><td>20%</td><td>60%</td><td>0%</td></tr>
+            <tr><td>Wan 2.6</td><td>83%</td><td>100%</td><td>70%</td><td>80%</td><td>80%</td><td>80%</td><td>80%</td><td>40%</td></tr>
+            <tr><td>LVP</td><td>70%</td><td>40%</td><td>70%</td><td>40%</td><td>20%</td><td>80%</td><td>40%</td><td>20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="title is-5" style="margin-top: 2rem;">Human (Step Level)</h4>
+      <div class="scores-table-wrap">
+        <table class="score-table" data-heatmap="true" data-highlight-max="true">
+          <thead>
+            <tr>
+              <th rowspan="2">Method</th>
+              <th colspan="3">Put on Plate</th>
+              <th colspan="5">Put in Drawer</th>
+            </tr>
+            <tr>
+              <th>contact</th>
+              <th>lift</th>
+              <th>place</th>
+              <th>contact</th>
+              <th>lift</th>
+              <th>above drawer</th>
+              <th>in drawer</th>
+              <th>close drawer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cosmos</td><td>90%</td><td>20%</td><td>15%</td><td>80%</td><td>20%</td><td>20%</td><td>20%</td><td>10%</td></tr>
+            <tr><td>Wan 2.2</td><td>100%</td><td>60%</td><td>55%</td><td>100%</td><td>60%</td><td>60%</td><td>40%</td><td>20%</td></tr>
+            <tr><td>Veo 3.1</td><td>100%</td><td>70%</td><td>30%</td><td>100%</td><td>70%</td><td>70%</td><td>60%</td><td>60%</td></tr>
+            <tr><td>Wan 2.6</td><td>100%</td><td>75%</td><td>70%</td><td>100%</td><td>80%</td><td>80%</td><td>80%</td><td>80%</td></tr>
+            <tr><td>LVP</td><td>100%</td><td>75%</td><td>70%</td><td>100%</td><td>70%</td><td>60%</td><td>50%</td><td>40%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr class="scores-divider">
+
+    <div class="scores-block">
+      <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">Robot</h3>
+
+      <h4 class="title is-5" style="margin-top: 1.5rem;">Robot (Task Level)</h4>
+      <div class="scores-table-wrap">
+        <table class="score-table" data-heatmap="true" data-highlight-max="true">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Close Drawer</th>
+              <th>Pick Object</th>
+              <th>Push Object</th>
+              <th>Push Button</th>
+              <th>Put on Plate</th>
+              <th>Discard Trash</th>
+              <th>Pull Object</th>
+              <th>Put in Drawer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cosmos</td><td>0%</td><td>10%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Wan 2.2</td><td>30%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Wan 2.6</td><td>50%</td><td>20%</td><td>40%</td><td>40%</td><td>20%</td><td>10%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Veo</td><td>20%</td><td>20%</td><td>10%</td><td>20%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Cosmos-FT</td><td>90%</td><td>50%</td><td>50%</td><td>60%</td><td>40%</td><td>30%</td><td>40%</td><td>20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="title is-5" style="margin-top: 2rem;">Robot (Step Level)</h4>
+      <div class="scores-table-wrap">
+        <table class="score-table" data-heatmap="true" data-highlight-max="true">
+          <thead>
+            <tr>
+              <th rowspan="2">Method</th>
+              <th colspan="3">Put on Plate</th>
+              <th colspan="5">Put in Drawer</th>
+            </tr>
+            <tr>
+              <th>contact</th>
+              <th>lift</th>
+              <th>place</th>
+              <th>contact</th>
+              <th>lift</th>
+              <th>above drawer</th>
+              <th>in drawer</th>
+              <th>close drawer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cosmos</td><td>30%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Wan 2.2</td><td>20%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Wan 2.6</td><td>40%</td><td>20%</td><td>20%</td><td>30%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Veo</td><td>40%</td><td>10%</td><td>10%</td><td>30%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+            <tr><td>Cosmos-FT</td><td>60%</td><td>40%</td><td>40%</td><td>60%</td><td>20%</td><td>20%</td><td>20%</td><td>20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End scores -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">

@@ -119,6 +119,63 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function parsePercent(text) {
+    if (!text) return null;
+    const m = String(text).trim().match(/(-?\d+(\.\d+)?)\s*%?/);
+    if (!m) return null;
+    const v = Number(m[1]);
+    if (!Number.isFinite(v)) return null;
+    return v;
+}
+
+function heatColor(value) {
+    // Map 0..100 to red->green with very light backgrounds.
+    const v = Math.max(0, Math.min(100, value));
+    const hue = (v / 100) * 120; // 0=red, 120=green
+    const sat = 55;
+    const light = 92 - (v / 100) * 14; // 92..78
+    return `hsl(${hue} ${sat}% ${light}%)`;
+}
+
+function applyScoreTables() {
+    const tables = document.querySelectorAll('table.score-table');
+    tables.forEach((table) => {
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+        if (rows.length === 0) return;
+
+        // Apply heatmap per cell (skip first column = method)
+        rows.forEach((tr) => {
+            const tds = Array.from(tr.querySelectorAll('td'));
+            tds.forEach((td, idx) => {
+                if (idx === 0) return;
+                const v = parsePercent(td.textContent);
+                if (v === null) return;
+                td.style.background = heatColor(v);
+            });
+        });
+
+        // Highlight max per column (skip first column)
+        if (table.dataset.highlightMax !== 'true') return;
+        const colCount = rows[0].querySelectorAll('td').length;
+        for (let c = 1; c < colCount; c++) {
+            let max = -Infinity;
+            rows.forEach((tr) => {
+                const td = tr.querySelectorAll('td')[c];
+                const v = parsePercent(td?.textContent);
+                if (v === null) return;
+                if (v > max) max = v;
+            });
+            if (!Number.isFinite(max)) continue;
+            rows.forEach((tr) => {
+                const td = tr.querySelectorAll('td')[c];
+                const v = parsePercent(td?.textContent);
+                if (v === null) return;
+                if (v === max) td.classList.add('score-best');
+            });
+        }
+    });
+}
+
 $(document).ready(function() {
     var options = {
 		slidesToScroll: 1,
@@ -137,5 +194,7 @@ $(document).ready(function() {
     if (typeof bulmaSlider !== 'undefined' && document.querySelectorAll('.slider').length > 0) {
         bulmaSlider.attach();
     }
+
+    applyScoreTables();
 
 })
