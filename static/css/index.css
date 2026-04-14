@@ -298,6 +298,7 @@ table.score-table {
   border-collapse: separate;
   border-spacing: 0;
   min-width: 980px;
+  table-layout: fixed;
 }
 
 table.score-table th,
@@ -307,6 +308,7 @@ table.score-table td {
   border-bottom: 1px solid var(--border-color);
   font-size: 0.95rem;
   white-space: nowrap;
+  text-align: center;
 }
 
 table.score-table th:last-child,
@@ -338,7 +340,7 @@ table.score-table tr.score-subheader th {
 }
 
 table.score-table tr.score-subheader th:first-child {
-  text-align: left;
+  text-align: center;
 }
 
 table.score-table tr.score-section th {
@@ -349,21 +351,22 @@ table.score-table tr.score-subheader th {
   position: static;
 }
 
-table.score-table tbody td {
-  text-align: center;
+/* Fixed column widths (match Human/Robot) */
+table.score-table col.col-method {
+  width: 140px;
+}
+
+table.score-table col.col-metric {
+  width: calc((100% - 140px) / 8);
 }
 
 table.score-table tbody td:first-child,
 table.score-table thead th:first-child {
-  text-align: left;
   font-weight: 700;
   background: var(--background-primary);
   position: sticky;
   left: 0;
   z-index: 3;
-  width: 140px;
-  min-width: 140px;
-  max-width: 140px;
 }
 
 table.score-table thead th:first-child {
