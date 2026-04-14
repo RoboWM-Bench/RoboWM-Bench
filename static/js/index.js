@@ -146,6 +146,7 @@ function applyScoreTables() {
         // Split into blocks by section header rows; compute heat/max per block
         const blocks = [];
         let current = [];
+        let lastWasSubheader = false;
 
         function flush() {
             if (current.length > 0) blocks.push(current);
@@ -160,12 +161,17 @@ function applyScoreTables() {
 
             if (hasSection) {
                 flush();
+                lastWasSubheader = false;
                 return;
             }
             if (isSubheader) {
-                flush(); // start a new block after each subheader
+                // Start a new block at the first subheader row only.
+                // Some tables use two header rows for Step Level.
+                if (!lastWasSubheader) flush();
+                lastWasSubheader = true;
                 return;
             }
+            lastWasSubheader = false;
             if (isDataRow) current.push(tr);
         });
         flush();

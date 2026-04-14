@@ -338,6 +338,8 @@ table.score-table tr.score-subheader th {
   background: var(--background-secondary);
   font-weight: 700;
   text-align: center;
+  white-space: normal;
+  line-height: 1.15;
 }
 
 table.score-table tr.score-subheader th:first-child {
