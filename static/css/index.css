@@ -297,7 +297,8 @@ table.score-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 980px;
+  /* 140 (method) + 8 * 130 (metrics) */
+  min-width: 1180px;
   table-layout: fixed;
 }
 
@@ -357,7 +358,7 @@ table.score-table col.col-method {
 }
 
 table.score-table col.col-metric {
-  width: calc((100% - 140px) / 8);
+  width: 130px;
 }
 
 table.score-table tbody td:first-child,
