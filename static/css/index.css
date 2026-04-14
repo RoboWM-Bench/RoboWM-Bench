@@ -253,6 +253,12 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+/* Wider column for overview / pipeline (Bulma is-max-desktop caps ~960px) */
+.container.paper-figures-container {
+  max-width: min(96vw, 1520px);
+  width: 100%;
+}
+
 /* Full-width raster figures (exported from PDF) */
 .paper-figure-img {
   display: block;
@@ -261,7 +267,8 @@ body {
   height: auto;
   margin: 0 auto;
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
+  /* Light shadow only — heavy shadow reads as an extra “white frame” around content */
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
 }
 
 .results-carousel {
