@@ -319,7 +319,7 @@
         <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="RoboWM-Bench teaser." width="1835" height="1478" loading="lazy" decoding="async">
       </figure>
       <p class="has-text-centered" style="margin-top: 1rem;">
-        RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution. (a) Given an initial scene observation and task description, world models generate manipulation videos with human hands or robot arms. The predicted behaviors are converted into embodied action sequences and validated in simulation through real-to-sim scene reconstruction. (b) RoboWM-Bench spans a diverse suite of manipulation tasks with varying interaction dynamics, object properties, and temporal horizons. (c) Performance of state-of-the-art video world models on RoboWM-Bench.
+        <strong>RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution.</strong> (a) Given an initial scene observation and task description, world models generate manipulation videos with human hands or robot arms. The predicted behaviors are converted into embodied action sequences and validated in simulation through real-to-sim scene reconstruction. (b) RoboWM-Bench spans a diverse suite of manipulation tasks with varying interaction dynamics, object properties, and temporal horizons. (c) Performance of state-of-the-art video world models on RoboWM-Bench.
       </p>
     </div>
   </div>
@@ -389,6 +389,22 @@
 </section>
 <!-- End real-to-sim consistency -->
 
+<!-- Qualitative results -->
+<section class="hero is-small is-light paper-figures-section">
+  <div class="hero-body">
+    <div class="container paper-figures-container">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+      <figure class="has-text-centered" style="margin: 0;">
+        <img class="paper-figure-img" src="static/images/qualitative_results.png" alt="Qualitative results on RoboWM-Bench." width="2526" height="3101" loading="lazy" decoding="async">
+      </figure>
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        <strong>Qualitative results on RoboWM-Bench.</strong> For each task, predicted videos (left) are converted into robot actions and executed in simulation (right).
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End qualitative results -->
+
 <!-- Scores -->
 <section class="section hero is-light" id="Scores">
   <div class="container paper-figures-container">
@@ -404,7 +420,7 @@
             <col class="col-metric"><col class="col-metric"><col class="col-metric"><col class="col-metric">
           </colgroup>
           <tbody>
-            <tr class="score-section"><th colspan="9">Human (Task Level)</th></tr>
+            <tr class="score-section"><th colspan="9">Task Level</th></tr>
             <tr class="score-subheader">
               <th>Method</th>
               <th>Pick Object</th>
@@ -422,7 +438,7 @@
             <tr><td>Wan 2.6</td><td>83%</td><td>100%</td><td>70%</td><td>80%</td><td>80%</td><td>80%</td><td>80%</td><td>40%</td></tr>
             <tr><td>LVP</td><td>70%</td><td>40%</td><td>70%</td><td>40%</td><td>20%</td><td>80%</td><td>40%</td><td>20%</td></tr>
 
-            <tr class="score-section"><th colspan="9">Human (Step Level)</th></tr>
+            <tr class="score-section"><th colspan="9">Step Level</th></tr>
             <tr class="score-subheader">
               <th rowspan="2">Method</th>
               <th colspan="3">Put on Plate</th>
@@ -460,7 +476,7 @@
             <col class="col-metric"><col class="col-metric"><col class="col-metric"><col class="col-metric">
           </colgroup>
           <tbody>
-            <tr class="score-section"><th colspan="9">Robot (Task Level)</th></tr>
+            <tr class="score-section"><th colspan="9">Task Level</th></tr>
             <tr class="score-subheader">
               <th>Method</th>
               <th>Close Drawer</th>
@@ -478,7 +494,7 @@
             <tr><td>Veo</td><td>20%</td><td>20%</td><td>10%</td><td>20%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Cosmos-FT</td><td>90%</td><td>50%</td><td>50%</td><td>60%</td><td>40%</td><td>30%</td><td>40%</td><td>20%</td></tr>
 
-            <tr class="score-section"><th colspan="9">Robot (Step Level)</th></tr>
+            <tr class="score-section"><th colspan="9">Step Level</th></tr>
             <tr class="score-subheader">
               <th rowspan="2">Method</th>
               <th colspan="3">Put on Plate</th>
