@@ -253,6 +253,17 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+/* Full-width raster figures (exported from PDF) */
+.paper-figure-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
 .results-carousel {
   overflow: hidden;
   padding: 1rem 0;
