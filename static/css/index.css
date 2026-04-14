@@ -259,6 +259,12 @@ body {
   width: 100%;
 }
 
+/* Reduce extra whitespace around big figures */
+.paper-figures-section .hero-body {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 /* Full-width raster figures (exported from PDF) */
 .paper-figure-img {
   display: block;
@@ -266,9 +272,9 @@ body {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  border-radius: var(--border-radius-lg);
-  /* Light shadow only — heavy shadow reads as an extra “white frame” around content */
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
+  /* Avoid “frame” feel: no rounding/shadow for figures */
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .results-carousel {
