@@ -361,10 +361,21 @@ table.score-table thead th:first-child {
   position: sticky;
   left: 0;
   z-index: 3;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
 }
 
 table.score-table thead th:first-child {
   background: var(--background-secondary);
+}
+
+/* Ensure first column width is consistent even without <thead> */
+table.score-table tr.score-subheader th:first-child,
+table.score-table tr.score-section th:first-child {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
 }
 
 .score-best {
