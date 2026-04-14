@@ -310,33 +310,21 @@
 </section>
 
 
-<!-- Teaser video -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="teaser-video" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/5b2cd841f6cce71fa787523f08e2f56c.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Overview -->
+<!-- Teaser -->
 <section class="hero is-small is-light paper-figures-section">
   <div class="hero-body">
     <div class="container paper-figures-container">
-      <h2 class="title is-3 has-text-centered">Overview</h2>
+      <h2 class="title is-3 has-text-centered">Teaser</h2>
       <figure class="has-text-centered" style="margin: 0;">
-        <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="Overview of RoboWM-Bench." width="1835" height="1478" loading="lazy" decoding="async">
+        <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="RoboWM-Bench teaser." width="1835" height="1478" loading="lazy" decoding="async">
       </figure>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-        Overview of RoboWM-Bench. RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution.
-      </h2>
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution. (a) Given an initial scene observation and task description, world models generate manipulation videos with human hands or robot arms. The predicted behaviors are converted into embodied action sequences and validated in simulation through real-to-sim scene reconstruction. (b) RoboWM-Bench spans a diverse suite of manipulation tasks with varying interaction dynamics, object properties, and temporal horizons. (c) Performance of state-of-the-art video world models on RoboWM-Bench.
+      </p>
     </div>
   </div>
 </section>
-<!-- End overview -->
+<!-- End teaser -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -346,16 +334,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advances in large-scale video world models have enabled increasingly realistic future prediction, raising the prospect of leveraging imagined videos for robot learning. However, visual realism does not imply physical plausibility, and behaviors inferred from generated videos may violate dynamics and fail when executed by embodied agents.
-          </p>
-          <p>
-            Existing benchmarks begin to incorporate notions of physical plausibility, but they largely remain perception- or diagnostic-oriented and do not systematically evaluate whether predicted behaviors can be translated into executable actions that complete the intended task.
-          </p>
-          <p>
-            To address this gap, we introduce <strong>RoboWM-Bench</strong>, a manipulation-centric benchmark for embodiment-grounded evaluation of video world models. RoboWM-Bench converts generated behaviors from both human-hand and robotic manipulation videos into embodied action sequences and validates them through robotic execution. The benchmark spans diverse manipulation scenarios and establishes a unified protocol for consistent and reproducible evaluation.
-          </p>
-          <p>
-            Using RoboWM-Bench, we evaluate state-of-the-art video world models and find that reliably generating physically executable behaviors remains an open challenge. Common failure modes include errors in spatial reasoning, unstable contact prediction, and non-physical deformations. While finetuning on manipulation data yields improvements, physical inconsistencies still persist, suggesting opportunities for more physically grounded video generation for robots.
+            Recent advances in large-scale video world models have enabled increasingly realistic future prediction, raising the prospect of leveraging imagined videos for robot learning. However, visual realism does not imply physical plausibility, and behaviors inferred from generated videos may violate dynamics and fail when executed by embodied agents. Existing benchmarks begin to incorporate notions of physical plausibility, but they largely remain perception- or diagnostic-oriented and do not systematically evaluate whether predicted behaviors can be translated into executable actions that complete the intended task. To address this gap, we introduce <strong>RoboWM-Bench</strong>, a manipulation-centric benchmark for embodiment-grounded evaluation of video world models. RoboWM-Bench converts generated behaviors from both human-hand and robotic manipulation videos into embodied action sequences and validates them through robotic execution. The benchmark spans diverse manipulation scenarios and establishes a unified protocol for consistent and reproducible evaluation. Using RoboWM-Bench, we evaluate state-of-the-art video world models and find that reliably generating physically executable behaviors remains an open challenge. Common failure modes include errors in spatial reasoning, unstable contact prediction, and non-physical deformations. While finetuning on manipulation data yields improvements, physical inconsistencies still persist, suggesting opportunities for more physically grounded video generation for robots.
           </p>
         </div>
       </div>
@@ -363,6 +342,19 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Video -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+      <video poster="" id="video-presentation" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/5b2cd841f6cce71fa787523f08e2f56c.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End video -->
 
 
 <!-- Pipeline -->
@@ -373,10 +365,29 @@
       <figure class="has-text-centered" style="margin: 0;">
         <img class="paper-figure-img" src="static/images/pipeline_figure.png" alt="RoboWM-Bench evaluation pipeline." width="3098" height="1363" loading="lazy" decoding="async">
       </figure>
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        <strong>Pipeline of RoboWM-Bench.</strong> Given an initial scene observation, the corresponding real-world scene is reconstructed in simulation through a real-to-sim pipeline, enabling consistent and reproducible evaluation. Predicted videos are then converted into executable robot actions through two pathways: human-centric retargeting, which estimates 3D hand poses and retargets them to robot end-effector actions, and robot-centric inverse dynamics, which predicts joint-space actions via an inverse dynamics model (IDM). The resulting actions are executed in simulation and evaluated using step-level checkers and final task success rates to measure embodied executability.
+      </p>
     </div>
   </div>
 </section>
 <!-- End pipeline -->
+
+<!-- Real-to-sim consistency -->
+<section class="hero is-small is-light paper-figures-section">
+  <div class="hero-body">
+    <div class="container paper-figures-container">
+      <h2 class="title is-3 has-text-centered">Real-to-sim Consistency</h2>
+      <figure class="has-text-centered" style="margin: 0;">
+        <img class="paper-figure-img" src="static/images/real_sim_consistency.png" alt="Real-to-sim consistency evaluation." width="2850" height="1070" loading="lazy" decoding="async">
+      </figure>
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        <strong>Real-to-sim consistency evaluation.</strong> Identical manipulation trajectories are executed in real-world scenes and reconstructed simulation environments, yielding consistent success and failure outcomes.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End real-to-sim consistency -->
 
 
 
