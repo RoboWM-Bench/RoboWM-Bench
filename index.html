@@ -396,12 +396,11 @@
 
     <div class="scores-block">
       <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">Human</h3>
-
-      <h4 class="title is-5" style="margin-top: 1.5rem;">Human (Task Level)</h4>
       <div class="scores-table-wrap">
-        <table class="score-table" data-heatmap="true" data-highlight-max="true">
-          <thead>
-            <tr>
+        <table class="score-table score-table-unified" data-heatmap="true" data-highlight-max="true">
+          <tbody>
+            <tr class="score-section"><th colspan="9">Human (Task Level)</th></tr>
+            <tr class="score-subheader">
               <th>Method</th>
               <th>Pick Object</th>
               <th>Push Button</th>
@@ -412,38 +411,24 @@
               <th>Put in Drawer</th>
               <th>Fold Towel</th>
             </tr>
-          </thead>
-          <tbody>
             <tr><td>Cosmos</td><td>23%</td><td>40%</td><td>15%</td><td>0%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td></tr>
             <tr><td>Wan 2.2</td><td>57%</td><td>80%</td><td>55%</td><td>60%</td><td>40%</td><td>0%</td><td>20%</td><td>0%</td></tr>
             <tr><td>Veo 3.1</td><td>73%</td><td>100%</td><td>30%</td><td>60%</td><td>20%</td><td>20%</td><td>60%</td><td>0%</td></tr>
             <tr><td>Wan 2.6</td><td>83%</td><td>100%</td><td>70%</td><td>80%</td><td>80%</td><td>80%</td><td>80%</td><td>40%</td></tr>
             <tr><td>LVP</td><td>70%</td><td>40%</td><td>70%</td><td>40%</td><td>20%</td><td>80%</td><td>40%</td><td>20%</td></tr>
-          </tbody>
-        </table>
-      </div>
 
-      <h4 class="title is-5" style="margin-top: 2rem;">Human (Step Level)</h4>
-      <div class="scores-table-wrap">
-        <table class="score-table" data-heatmap="true" data-highlight-max="true">
-          <thead>
-            <tr>
-              <th rowspan="2">Method</th>
-              <th colspan="3">Put on Plate</th>
-              <th colspan="5">Put in Drawer</th>
+            <tr class="score-section"><th colspan="9">Human (Step Level)</th></tr>
+            <tr class="score-subheader">
+              <th>Method</th>
+              <th>Plate: contact</th>
+              <th>Plate: lift</th>
+              <th>Plate: place</th>
+              <th>Drawer: contact</th>
+              <th>Drawer: lift</th>
+              <th>Drawer: above</th>
+              <th>Drawer: in</th>
+              <th>Drawer: close</th>
             </tr>
-            <tr>
-              <th>contact</th>
-              <th>lift</th>
-              <th>place</th>
-              <th>contact</th>
-              <th>lift</th>
-              <th>above drawer</th>
-              <th>in drawer</th>
-              <th>close drawer</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr><td>Cosmos</td><td>90%</td><td>20%</td><td>15%</td><td>80%</td><td>20%</td><td>20%</td><td>20%</td><td>10%</td></tr>
             <tr><td>Wan 2.2</td><td>100%</td><td>60%</td><td>55%</td><td>100%</td><td>60%</td><td>60%</td><td>40%</td><td>20%</td></tr>
             <tr><td>Veo 3.1</td><td>100%</td><td>70%</td><td>30%</td><td>100%</td><td>70%</td><td>70%</td><td>60%</td><td>60%</td></tr>
@@ -458,12 +443,11 @@
 
     <div class="scores-block">
       <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">Robot</h3>
-
-      <h4 class="title is-5" style="margin-top: 1.5rem;">Robot (Task Level)</h4>
       <div class="scores-table-wrap">
-        <table class="score-table" data-heatmap="true" data-highlight-max="true">
-          <thead>
-            <tr>
+        <table class="score-table score-table-unified" data-heatmap="true" data-highlight-max="true">
+          <tbody>
+            <tr class="score-section"><th colspan="9">Robot (Task Level)</th></tr>
+            <tr class="score-subheader">
               <th>Method</th>
               <th>Close Drawer</th>
               <th>Pick Object</th>
@@ -474,38 +458,24 @@
               <th>Pull Object</th>
               <th>Put in Drawer</th>
             </tr>
-          </thead>
-          <tbody>
             <tr><td>Cosmos</td><td>0%</td><td>10%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Wan 2.2</td><td>30%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Wan 2.6</td><td>50%</td><td>20%</td><td>40%</td><td>40%</td><td>20%</td><td>10%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Veo</td><td>20%</td><td>20%</td><td>10%</td><td>20%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Cosmos-FT</td><td>90%</td><td>50%</td><td>50%</td><td>60%</td><td>40%</td><td>30%</td><td>40%</td><td>20%</td></tr>
-          </tbody>
-        </table>
-      </div>
 
-      <h4 class="title is-5" style="margin-top: 2rem;">Robot (Step Level)</h4>
-      <div class="scores-table-wrap">
-        <table class="score-table" data-heatmap="true" data-highlight-max="true">
-          <thead>
-            <tr>
-              <th rowspan="2">Method</th>
-              <th colspan="3">Put on Plate</th>
-              <th colspan="5">Put in Drawer</th>
+            <tr class="score-section"><th colspan="9">Robot (Step Level)</th></tr>
+            <tr class="score-subheader">
+              <th>Method</th>
+              <th>Plate: contact</th>
+              <th>Plate: lift</th>
+              <th>Plate: place</th>
+              <th>Drawer: contact</th>
+              <th>Drawer: lift</th>
+              <th>Drawer: above</th>
+              <th>Drawer: in</th>
+              <th>Drawer: close</th>
             </tr>
-            <tr>
-              <th>contact</th>
-              <th>lift</th>
-              <th>place</th>
-              <th>contact</th>
-              <th>lift</th>
-              <th>above drawer</th>
-              <th>in drawer</th>
-              <th>close drawer</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr><td>Cosmos</td><td>30%</td><td>10%</td><td>10%</td><td>10%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Wan 2.2</td><td>20%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
             <tr><td>Wan 2.6</td><td>40%</td><td>20%</td><td>20%</td><td>30%</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>

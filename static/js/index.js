@@ -143,36 +143,65 @@ function applyScoreTables() {
         const rows = Array.from(table.querySelectorAll('tbody tr'));
         if (rows.length === 0) return;
 
-        // Apply heatmap per cell (skip first column = method)
-        rows.forEach((tr) => {
-            const tds = Array.from(tr.querySelectorAll('td'));
-            tds.forEach((td, idx) => {
-                if (idx === 0) return;
-                const v = parsePercent(td.textContent);
-                if (v === null) return;
-                td.style.background = heatColor(v);
-            });
-        });
+        // Split into blocks by section header rows; compute heat/max per block
+        const blocks = [];
+        let current = [];
 
-        // Highlight max per column (skip first column)
-        if (table.dataset.highlightMax !== 'true') return;
-        const colCount = rows[0].querySelectorAll('td').length;
-        for (let c = 1; c < colCount; c++) {
-            let max = -Infinity;
-            rows.forEach((tr) => {
-                const td = tr.querySelectorAll('td')[c];
-                const v = parsePercent(td?.textContent);
-                if (v === null) return;
-                if (v > max) max = v;
-            });
-            if (!Number.isFinite(max)) continue;
-            rows.forEach((tr) => {
-                const td = tr.querySelectorAll('td')[c];
-                const v = parsePercent(td?.textContent);
-                if (v === null) return;
-                if (v === max) td.classList.add('score-best');
-            });
+        function flush() {
+            if (current.length > 0) blocks.push(current);
+            current = [];
         }
+
+        rows.forEach((tr) => {
+            const hasSection = tr.classList.contains('score-section') || tr.querySelector('th[colspan]');
+            const isSubheader = tr.classList.contains('score-subheader');
+            const tds = tr.querySelectorAll('td');
+            const isDataRow = tds.length > 1;
+
+            if (hasSection) {
+                flush();
+                return;
+            }
+            if (isSubheader) {
+                flush(); // start a new block after each subheader
+                return;
+            }
+            if (isDataRow) current.push(tr);
+        });
+        flush();
+
+        blocks.forEach((blockRows) => {
+            // Apply heatmap per cell (skip first column = method)
+            blockRows.forEach((tr) => {
+                const tds = Array.from(tr.querySelectorAll('td'));
+                tds.forEach((td, idx) => {
+                    if (idx === 0) return;
+                    const v = parsePercent(td.textContent);
+                    if (v === null) return;
+                    td.style.background = heatColor(v);
+                });
+            });
+
+            // Highlight max per column (skip first column) within the block
+            if (table.dataset.highlightMax !== 'true') return;
+            const colCount = blockRows[0].querySelectorAll('td').length;
+            for (let c = 1; c < colCount; c++) {
+                let max = -Infinity;
+                blockRows.forEach((tr) => {
+                    const td = tr.querySelectorAll('td')[c];
+                    const v = parsePercent(td?.textContent);
+                    if (v === null) return;
+                    if (v > max) max = v;
+                });
+                if (!Number.isFinite(max)) continue;
+                blockRows.forEach((tr) => {
+                    const td = tr.querySelectorAll('td')[c];
+                    const v = parsePercent(td?.textContent);
+                    if (v === null) return;
+                    if (v === max) td.classList.add('score-best');
+                });
+            }
+        });
     });
 }
 
