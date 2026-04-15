@@ -10,10 +10,11 @@
   --background-primary: #ffffff;
   --background-secondary: #f8fafc;
   --background-accent: #f1f5f9;
-  /* Full-width section bands (high contrast; used with !important on #main-content sections) */
+  /* Full-width section bands (see section.content-band--* rules) */
   --page-band-light: #ffffff;
-  --page-band-shade: #e2e8f0;
-  --page-band-footer: #cbd5e1;
+  /* Deliberately darker than slate-200 so bands read as real “blocks”, not white */
+  --page-band-shade: #c8d4e4;
+  --page-band-footer: #aebccf;
   --border-color: #e2e8f0;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -117,17 +118,17 @@ body {
 }
 
 /*
- * Alternating page bands — scoped under #main-content and forced with !important so
- * Bulma / load order cannot flatten everything to one background.
+ * Alternating page bands — target <section> classes directly (no #main-content child
+ * combinator) so DOM quirks / cached HTML cannot zero out the striping.
  */
-#main-content > section.content-band--light {
+section.content-band--light {
   background-color: var(--page-band-light) !important;
   border-top: 1px solid var(--border-color);
 }
 
-#main-content > section.content-band--shade {
+section.content-band--shade {
   background-color: var(--page-band-shade) !important;
-  border-top: 1px solid #94a3b8;
+  border-top: 1px solid #64748b;
 }
 
 
