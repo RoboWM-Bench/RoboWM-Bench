@@ -628,10 +628,16 @@ table.score-table tr.score-section th:first-child {
   border-radius: 2px;
 }
 
+/* Paper abstract: wider measure + smaller body (academic-style) */
+.paper-abstract .container.paper-abstract-container {
+  max-width: min(96vw, 1180px) !important;
+  width: 100%;
+}
+
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.28rem;
-  line-height: 1.82;
+  font-size: 1.1rem;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -798,7 +804,7 @@ code {
   }
   
   .content.has-text-justified {
-    font-size: 1.12rem;
+    font-size: 1rem;
   }
 
   .paper-abstract .title.is-3 {
@@ -824,7 +830,7 @@ code {
   }
 
   .paper-abstract .content.has-text-justified {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
   
   .hero-body {
