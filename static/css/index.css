@@ -112,6 +112,22 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Alternating section backgrounds (explicit; avoids adjacent blocks looking identical) */
+.section-bg-base {
+  background: var(--background-primary);
+}
+
+.section-bg-alt {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-bg-accent {
+  background: var(--background-accent);
+  border-top: 1px solid var(--border-color);
+}
+
 
 /* Publication Content Styling */
 .publication-title {
@@ -587,7 +603,7 @@ table.score-table tr.score-section th:first-child {
 
 /* Footer Improvements */
 .footer {
-  background: var(--background-secondary);
+  background: var(--background-accent);
   border-top: 1px solid var(--border-color);
   padding: 3rem 1.5rem;
 }
