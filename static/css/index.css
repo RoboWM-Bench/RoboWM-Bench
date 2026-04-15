@@ -630,8 +630,8 @@ table.score-table tr.score-section th:first-child {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.5rem;
-  line-height: 1.9;
+  font-size: 1.28rem;
+  line-height: 1.82;
   color: var(--text-secondary);
 }
 
@@ -798,7 +798,7 @@ code {
   }
   
   .content.has-text-justified {
-    font-size: 1.3rem;
+    font-size: 1.12rem;
   }
 
   .paper-abstract .title.is-3 {
@@ -824,7 +824,7 @@ code {
   }
 
   .paper-abstract .content.has-text-justified {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
   
   .hero-body {
