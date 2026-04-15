@@ -254,8 +254,6 @@
             </div>
 
                   <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution &nbsp;&nbsp; <sup>†</sup>Corresponding Author</small></span>
                   </div>
 
@@ -381,9 +379,69 @@
   <div class="hero-body">
     <div class="container paper-figures-container">
       <h2 class="title is-3 has-text-centered">Real-to-sim Consistency</h2>
-      <figure class="has-text-centered" style="margin: 0;">
-        <img class="paper-figure-img" src="static/images/real_sim_consistency.png" alt="Real-to-sim consistency evaluation." width="2850" height="1070" loading="lazy" decoding="async">
-      </figure>
+
+      <div class="consistency-videos-grid">
+        <div class="consistency-row">
+          <div class="consistency-cell">
+            <h3 class="title is-5 has-text-centered">Failure (Real)</h3>
+            <video class="consistency-video" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/fail_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="consistency-cell">
+            <h3 class="title is-5 has-text-centered">Failure (Sim)</h3>
+            <video class="consistency-video" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/fail_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p class="has-text-centered consistency-row-caption">
+          Failure cases: real-world executions (left) and reconstructed simulation rollouts (right) exhibit consistent failure outcomes.
+        </p>
+
+        <div class="consistency-row">
+          <div class="consistency-cell">
+            <h3 class="title is-5 has-text-centered">Success (Real)</h3>
+            <video class="consistency-video" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/succ_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="consistency-cell">
+            <h3 class="title is-5 has-text-centered">Success (Sim)</h3>
+            <video class="consistency-video" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/succ_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p class="has-text-centered consistency-row-caption">
+          Success cases: real-world executions (left) and reconstructed simulation rollouts (right) exhibit consistent success outcomes.
+        </p>
+      </div>
+
+      <div class="consistency-table-card">
+        <h3 class="title is-4 has-text-centered consistency-table-title">Consistency Table</h3>
+        <div class="scores-table-wrap" style="min-width: unset;">
+          <table class="consistency-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th class="consistency-success">Success Consistency</th>
+                <th class="consistency-failure">Failure Consistency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Pick Object</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Pull Object</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Push Object</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Put on Plate</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Discard Trash</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Close Drawer</td><td>10/10</td><td>10/10</td></tr>
+              <tr><td>Put in Drawer</td><td>10/10</td><td>10/10</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <p class="has-text-centered" style="margin-top: 1rem;">
         <strong>Real-to-sim consistency evaluation.</strong> Identical manipulation trajectories are executed in real-world scenes and reconstructed simulation environments, yielding consistent success and failure outcomes.
       </p>
@@ -536,13 +594,7 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{robowmbench2026,
-  title={RoboWM-Bench},
-  author={TBD},
-  journal={TBD},
-  year={2026},
-  url={https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE}
-}</code></pre>
+      <pre id="bibtex-code"><code></code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

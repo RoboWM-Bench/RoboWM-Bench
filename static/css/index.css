@@ -277,6 +277,90 @@ body {
   box-shadow: none;
 }
 
+/* Real-to-sim consistency videos */
+.consistency-videos-grid {
+  margin-top: 1.25rem;
+}
+
+.consistency-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.consistency-cell .title.is-5 {
+  margin-bottom: 0.75rem;
+}
+
+.consistency-video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  background: #000;
+}
+
+.consistency-row-caption {
+  margin: 0.75rem 0 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .consistency-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Consistency table */
+.consistency-table-card {
+  margin-top: 1.5rem;
+}
+
+.consistency-table-title {
+  margin-bottom: 1rem;
+}
+
+table.consistency-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.consistency-table th,
+table.consistency-table td {
+  padding: 0.85rem 0.9rem;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  background: var(--background-primary);
+}
+
+table.consistency-table th {
+  background: var(--background-secondary);
+  font-weight: 800;
+}
+
+table.consistency-table th:first-child,
+table.consistency-table td:first-child {
+  text-align: left;
+  font-weight: 700;
+}
+
+table.consistency-table th:last-child,
+table.consistency-table td:last-child {
+  border-right: none;
+}
+
+table.consistency-table thead th.consistency-success {
+  color: #16a34a;
+}
+
+table.consistency-table thead th.consistency-failure {
+  color: #dc2626;
+}
+
 /* Scores tables (heatmap style) */
 .scores-table-wrap {
   width: 100%;
