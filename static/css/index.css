@@ -10,6 +10,10 @@
   --background-primary: #ffffff;
   --background-secondary: #f8fafc;
   --background-accent: #f1f5f9;
+  /* Full-width section bands (high contrast; used with !important on #main-content sections) */
+  --page-band-light: #ffffff;
+  --page-band-shade: #e2e8f0;
+  --page-band-footer: #cbd5e1;
   --border-color: #e2e8f0;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -112,26 +116,18 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Alternating section backgrounds (explicit; avoids adjacent blocks looking identical) */
-.section-bg-base {
-  background: var(--background-primary);
-}
-
-.section-bg-alt {
-  background: var(--background-secondary);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.section-bg-accent {
-  background: var(--background-accent);
+/*
+ * Alternating page bands — scoped under #main-content and forced with !important so
+ * Bulma / load order cannot flatten everything to one background.
+ */
+#main-content > section.content-band--light {
+  background-color: var(--page-band-light) !important;
   border-top: 1px solid var(--border-color);
 }
 
-.video-presentation-section {
-  background: var(--background-secondary);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+#main-content > section.content-band--shade {
+  background-color: var(--page-band-shade) !important;
+  border-top: 1px solid #94a3b8;
 }
 
 
@@ -609,8 +605,8 @@ table.score-table tr.score-section th:first-child {
 
 /* Footer Improvements */
 .footer {
-  background: var(--background-accent);
-  border-top: 1px solid var(--border-color);
+  background-color: var(--page-band-footer) !important;
+  border-top: 1px solid #94a3b8;
   padding: 3rem 1.5rem;
 }
 
