@@ -145,7 +145,7 @@ section.content-band--shade {
   font-family: 'Inter', sans-serif !important;
   font-weight: 800 !important;
   color: var(--text-primary) !important;
-  font-size: clamp(2.65rem, 6.5vw, 4.25rem) !important;
+  font-size: clamp(3rem, 7.5vw, 4.85rem) !important;
   line-height: 1.08 !important;
   letter-spacing: -0.02em;
   margin: 0 0 0.5rem 0 !important;
@@ -155,7 +155,7 @@ section.content-band--shade {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   color: var(--text-primary);
-  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
   line-height: 1.35;
   margin: 0 0 1.25rem 0;
   max-width: 46rem;
@@ -625,9 +625,13 @@ table.score-table tr.score-section th:first-child {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.25rem;
+  line-height: 1.85;
   color: var(--text-secondary);
+}
+
+.paper-abstract .title.is-3 {
+  font-size: 2.25rem !important;
 }
 
 .content.has-text-justified p {
@@ -757,12 +761,12 @@ code {
   }
   
   .publication-title-main {
-    font-size: 2.65rem !important;
+    font-size: 3rem !important;
     line-height: 1.12 !important;
   }
 
   .publication-title-subtitle {
-    font-size: 1.05rem !important;
+    font-size: 1.2rem !important;
   }
   
   .publication-authors {
@@ -785,17 +789,29 @@ code {
   }
   
   .content.has-text-justified {
-    font-size: 1rem;
+    font-size: 1.12rem;
+  }
+
+  .paper-abstract .title.is-3 {
+    font-size: 1.85rem !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .publication-title-main {
-    font-size: 2.1rem !important;
+    font-size: 2.35rem !important;
   }
 
   .publication-title-subtitle {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .paper-abstract .title.is-3 {
+    font-size: 1.65rem !important;
+  }
+
+  .paper-abstract .content.has-text-justified {
+    font-size: 1.05rem;
   }
   
   .hero-body {
