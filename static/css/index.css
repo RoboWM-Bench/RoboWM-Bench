@@ -136,7 +136,7 @@ section.content-band--shade {
 .publication-title-block {
   text-align: center;
   margin-bottom: 2rem;
-  max-width: 52rem;
+  max-width: 58rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -145,8 +145,8 @@ section.content-band--shade {
   font-family: 'Inter', sans-serif !important;
   font-weight: 800 !important;
   color: var(--text-primary) !important;
-  font-size: clamp(3rem, 7.5vw, 4.85rem) !important;
-  line-height: 1.08 !important;
+  font-size: clamp(3.5rem, 9.5vw, 6rem) !important;
+  line-height: 1.06 !important;
   letter-spacing: -0.02em;
   margin: 0 0 0.5rem 0 !important;
 }
@@ -155,16 +155,16 @@ section.content-band--shade {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   color: var(--text-primary);
-  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
-  line-height: 1.35;
+  font-size: clamp(1.35rem, 3.4vw, 2rem);
+  line-height: 1.32;
   margin: 0 0 1.25rem 0;
-  max-width: 46rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .publication-title-accent {
-  width: 4.5rem;
+  width: 5.5rem;
   height: 3px;
   margin: 0 auto;
   border-radius: 999px;
@@ -625,13 +625,13 @@ table.score-table tr.score-section th:first-child {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.25rem;
-  line-height: 1.85;
+  font-size: 1.5rem;
+  line-height: 1.9;
   color: var(--text-secondary);
 }
 
 .paper-abstract .title.is-3 {
-  font-size: 2.25rem !important;
+  font-size: 2.75rem !important;
 }
 
 .content.has-text-justified p {
@@ -761,12 +761,12 @@ code {
   }
   
   .publication-title-main {
-    font-size: 3rem !important;
-    line-height: 1.12 !important;
+    font-size: 3.65rem !important;
+    line-height: 1.1 !important;
   }
 
   .publication-title-subtitle {
-    font-size: 1.2rem !important;
+    font-size: 1.45rem !important;
   }
   
   .publication-authors {
@@ -789,29 +789,29 @@ code {
   }
   
   .content.has-text-justified {
-    font-size: 1.12rem;
+    font-size: 1.3rem;
   }
 
   .paper-abstract .title.is-3 {
-    font-size: 1.85rem !important;
+    font-size: 2.2rem !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .publication-title-main {
-    font-size: 2.35rem !important;
+    font-size: 2.85rem !important;
   }
 
   .publication-title-subtitle {
-    font-size: 1.05rem !important;
+    font-size: 1.25rem !important;
   }
 
   .paper-abstract .title.is-3 {
-    font-size: 1.65rem !important;
+    font-size: 1.95rem !important;
   }
 
   .paper-abstract .content.has-text-justified {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
   
   .hero-body {
