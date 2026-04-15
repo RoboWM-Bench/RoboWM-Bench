@@ -12,9 +12,9 @@
   --background-accent: #f1f5f9;
   /* Full-width section bands (see section.content-band--* rules) */
   --page-band-light: #ffffff;
-  /* Light gray bands (subtle vs white; still reads as a separate block) */
-  --page-band-shade: #eef1f5;
-  --page-band-footer: #e8ecf1;
+  /* Very light gray bands */
+  --page-band-shade: #f5f6f8;
+  --page-band-footer: #f1f3f6;
   --border-color: #e2e8f0;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
