@@ -9,30 +9,29 @@
   <meta name="title" content="RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation">
   <meta name="description" content="RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution via robotic validation.">
   <meta name="keywords" content="RoboWM-Bench, video world models, robot manipulation, embodied AI, benchmark, physical plausibility, robotics">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="Feng Jiang, Yan Shen, Jingkai Xu, Yuchen Liu, Haifeng Wang, Zhenhao Shen, Jasper Lu, Shengze Huang, Yuanfei Wang, Chen Xie, Ruihai Wu">
+  <meta name="author" content="Feng Jiang, Yang Chen, Kyle Xu, Yuchen Liu, Haifeng Wang, Zhenhao Shen, Jasper Lu, Shengze Huang, Yuanfei Wang, Chen Xie, Ruihai Wu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <meta property="og:site_name" content="RoboWM-Bench">
   <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation">
   <meta property="og:description" content="RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution via robotic validation.">
   <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <meta property="og:url" content="https://robowm-bench.github.io/RoboWM-Bench/">
   <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image" content="https://robowm-bench.github.io/RoboWM-Bench/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="RoboWM-Bench">
   <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:author" content="Feng Jiang">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="video world models">
+  <meta property="article:tag" content="robot manipulation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -44,16 +43,25 @@
   <meta name="twitter:title" content="RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation">
   <meta name="twitter:description" content="RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution via robotic validation.">
   <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image" content="https://robowm-bench.github.io/RoboWM-Bench/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="RoboWM-Bench">
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_author" content="Jiang, Feng">
+  <meta name="citation_author" content="Chen, Yang">
+  <meta name="citation_author" content="Xu, Kyle">
+  <meta name="citation_author" content="Liu, Yuchen">
+  <meta name="citation_author" content="Wang, Haifeng">
+  <meta name="citation_author" content="Shen, Zhenhao">
+  <meta name="citation_author" content="Lu, Jasper">
+  <meta name="citation_author" content="Huang, Shengze">
+  <meta name="citation_author" content="Wang, Yuanfei">
+  <meta name="citation_author" content="Xie, Chen">
+  <meta name="citation_author" content="Wu, Ruihai">
   <meta name="citation_publication_date" content="2024">
   <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  <meta name="citation_pdf_url" content="https://robowm-bench.github.io/RoboWM-Bench/static/pdfs/paper.pdf">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -119,30 +127,26 @@
     "headline": "RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation",
     "description": "A manipulation-centric benchmark for evaluating video world models under embodied execution via robotic validation.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Feng Jiang", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Yang Chen", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Kyle Xu", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Yuchen Liu", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Haifeng Wang", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Zhenhao Shen", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Jasper Lu", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Shengze Huang", "affiliation": {"@type": "Organization", "name": "Tsinghua University"}},
+      {"@type": "Person", "name": "Yuanfei Wang", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Chen Xie", "affiliation": {"@type": "Organization", "name": "Lightwheel"}},
+      {"@type": "Person", "name": "Ruihai Wu", "affiliation": {"@type": "Organization", "name": "Peking University"}}
     ],
     "datePublished": "2024-01-01",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "RoboWM-Bench",
+      "url": "https://robowm-bench.github.io/RoboWM-Bench/"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "url": "https://robowm-bench.github.io/RoboWM-Bench/",
+    "image": "https://robowm-bench.github.io/RoboWM-Bench/static/images/social_preview.png",
     "keywords": ["RoboWM-Bench", "video world models", "robot manipulation", "embodied AI", "benchmark"],
     "abstract": "Recent advances in large-scale video world models have enabled increasingly realistic future prediction, raising the prospect of leveraging imagined videos for robot learning. However, visual realism does not imply physical plausibility, and behaviors inferred from generated videos may violate dynamics and fail when executed by embodied agents. Existing benchmarks begin to incorporate notions of physical plausibility, but they largely remain perception- or diagnostic-oriented and do not systematically evaluate whether predicted behaviors can be translated into executable actions that complete the intended task. To address this gap, we introduce RoboWM-Bench, a manipulation-centric benchmark for embodiment-grounded evaluation of video world models. RoboWM-Bench converts generated behaviors from both human-hand and robotic manipulation videos into embodied action sequences and validates them through robotic execution. The benchmark spans diverse manipulation scenarios and establishes a unified protocol for consistent and reproducible evaluation. Using RoboWM-Bench, we evaluate state-of-the-art video world models and find that reliably generating physically executable behaviors remains an open challenge. Common failure modes include errors in spatial reasoning, unstable contact prediction, and non-physical deformations. While finetuning on manipulation data yields improvements, physical inconsistencies still persist, suggesting opportunities for more physically grounded video generation for robots.",
     "citation": "BIBTEX_CITATION_HERE",
@@ -150,7 +154,7 @@
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://robowm-bench.github.io/RoboWM-Bench/"
     },
     "about": [
       {
@@ -170,12 +174,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/logo.png",
+    "name": "RoboWM-Bench",
+    "url": "https://robowm-bench.github.io/RoboWM-Bench/",
+    "logo": "https://robowm-bench.github.io/RoboWM-Bench/static/images/social_preview.png",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/robowm-bench/RoboWM-Bench"
     ]
   }
   </script>
@@ -200,21 +203,29 @@
               <div class="publication-title-accent" aria-hidden="true"></div>
             </header>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Feng Jiang<sup>*</sup>,</span>
-              <span class="author-block">Yan Shen<sup>*</sup>,</span>
-              <span class="author-block">Jingkai Xu<sup>*</sup>,</span>
-              <span class="author-block">Yuchen Liu,</span>
-              <span class="author-block">Haifeng Wang,</span>
-              <span class="author-block">Zhenhao Shen,</span>
-              <span class="author-block">Jasper Lu,</span>
-              <span class="author-block">Shengze Huang,</span>
-              <span class="author-block">Yuanfei Wang,</span>
-              <span class="author-block">Chen Xie,</span>
-              <span class="author-block">Ruihai Wu<sup>†</sup></span>
+              <span class="author-block">Feng Jiang<sup>*1</sup>,</span>
+              <span class="author-block">Yang Chen<sup>*1</sup>,</span>
+              <span class="author-block">Kyle Xu<sup>*1</sup>,</span>
+              <span class="author-block">Yuchen Liu<sup>1</sup>,</span>
+              <span class="author-block">Haifeng Wang<sup>1</sup>,</span>
+              <span class="author-block">Zhenhao Shen<sup>1</sup>,</span>
+              <span class="author-block">Jasper Lu<sup>1</sup>,</span>
+              <span class="author-block">Shengze Huang<sup>2</sup>,</span>
+              <span class="author-block">Yuanfei Wang<sup>1</sup>,</span>
+              <span class="author-block">Chen Xie<sup>3</sup>,</span>
+              <span class="author-block">Ruihai Wu<sup>1†</sup></span>
             </div>
 
+                  <div class="is-size-6 publication-authors" style="margin-top: 0.35rem;">
+                    <span><sup>1</sup>Peking University</span>
+                    <span> · </span>
+                    <span><sup>2</sup>Tsinghua University</span>
+                    <span> · </span>
+                    <span><sup>3</sup>Lightwheel</span>
+                  </div>
+
                   <div class="is-size-5 publication-authors">
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution &nbsp;&nbsp; <sup>†</sup>Corresponding Author</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Corresponding author: <a href="mailto:wuruihai@pku.edu.cn">wuruihai@pku.edu.cn</a></small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -243,7 +254,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/robowm-bench/RoboWM-Bench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
