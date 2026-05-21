@@ -264,7 +264,7 @@
     <div class="container paper-figures-container">
       <h2 class="title is-3 has-text-centered">Overview</h2>
       <figure class="has-text-centered" style="margin: 0;">
-        <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="RoboWM-Bench teaser." width="1835" height="1478" loading="lazy" decoding="async">
+        <img class="paper-figure-img" src="static/images/teaser_overview.png" alt="RoboWM-Bench teaser." width="2667" height="1494" loading="lazy" decoding="async">
       </figure>
       <p class="has-text-centered" style="margin-top: 1rem;">
         <strong>RoboWM-Bench is a manipulation-centric benchmark for evaluating video world models under embodied execution.</strong> (a) Given an initial scene observation and task description, world models generate manipulation videos with human hands or robot arms. The predicted behaviors are converted into embodied action sequences and validated in simulation through real-to-sim scene reconstruction. (b) RoboWM-Bench spans a diverse suite of manipulation tasks with varying interaction dynamics, object properties, and temporal horizons. (c) Performance of state-of-the-art video world models on RoboWM-Bench.
@@ -311,7 +311,7 @@
     <div class="container paper-figures-container">
       <h2 class="title is-3 has-text-centered">Pipeline</h2>
       <figure class="has-text-centered" style="margin: 0;">
-        <img class="paper-figure-img" src="static/images/pipeline_figure.png" alt="RoboWM-Bench evaluation pipeline." width="3098" height="1363" loading="lazy" decoding="async">
+        <img class="paper-figure-img" src="static/images/pipeline_figure.png" alt="RoboWM-Bench evaluation pipeline." width="3139" height="1392" loading="lazy" decoding="async">
       </figure>
       <p class="has-text-centered" style="margin-top: 1rem;">
         <strong>Pipeline of RoboWM-Bench.</strong> Given an initial scene observation, the corresponding real-world scene is reconstructed in simulation through a real-to-sim pipeline, enabling consistent and reproducible evaluation. Predicted videos are then converted into executable robot actions through two pathways: human-centric retargeting, which estimates 3D hand poses and retargets them to robot end-effector actions, and robot-centric inverse dynamics, which predicts joint-space actions via an inverse dynamics model (IDM). The resulting actions are executed in simulation and evaluated using step-level checkers and final task success rates to measure embodied executability.
